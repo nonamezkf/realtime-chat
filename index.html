@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat PHP</title>
+    <!-- <script src="https://js.pusher.com/7.0/pusher-with-encryption.min.js"></script> -->
+    <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.0/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        body{
+            width: 80%;
+            margin: 10% auto;
+            font-family: sans-serif;
+        }
+        .chat-box{
+            max-width: 100%;
+            border: 1px solid rgb(160, 157, 157);
+            
+        }
+
+        .chat-box .input1{
+            height: 30px;
+            border: 1px solid rgb(160, 157, 157);
+            border-radius: 3px;
+            margin-bottom: 20px;
+            margin-left: 10px;
+        }
+        
+        textarea{
+            width: 80%;
+        }
+        .chat-input{
+            display: flex;
+            justify-content: center;
+        }
+
+        .chat-message{
+            padding: 10px;
+        }
+
+        .username{
+            font-weight: 800;
+            padding-bottom: 5px;
+        }
+
+        .username .time{
+            font-size: 0.8rem;
+        }
+
+        .message{
+           white-space: pre-wrap; 
+        }
+       
+
+    </style>
+</head>
+
+<body>
+    <div class="chat-box" id="app">
+        <h4>Nama :</h4>
+        <input type="text" placeholder="ur name" class="input1" v-model="username">
+        <hr>
+        <div class="chat-lists">
+            <div class="chat-message" v-for="chat in chats" v.bind:data-id="chat.id">
+                <div class="username">{{chat.username}}
+                    <span class="time">{{chat.time}}</span>
+                </div>
+                    <div class="message">{{chat.message}}</div>
+            </div>
+        </div>
+        <h4>Message :</h4>
+        <div class="chat-input">
+            <textarea name="name" id="" rows="8"
+            v-model="chatInput"
+            @keydown="sendMessage"
+            placeholder="shift + enter untuk jarak">
+            </textarea>
+        </div>
+    </div>
+<script src="main.js"></script>
+</body>
+
+</html>
