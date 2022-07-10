@@ -6,9 +6,9 @@ $_POST = json_decode(file_get_contents('php://input'), true);
 
 require('../vendor/autoload.php');
 
-define("APP_KEY", 'a9bf317f3a67fe985c1e');
-define("APP_SECRET", '3454c3d7935b203ea824');
-define("APP_ID", '1434355');
+define("APP_KEY", '');
+define("APP_SECRET", '');
+define("APP_ID", '');
 
 $pusher = new Pusher\Pusher(
     APP_KEY,
