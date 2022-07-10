@@ -1,6 +1,6 @@
 Pusher.logToConsole = true
 
-let pusher = new Pusher('a9bf317f3a67fe985c1e', {
+let pusher = new Pusher('key', {
     cluster: 'ap1',
     encrypted: true
 })
