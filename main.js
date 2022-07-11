@@ -10,7 +10,7 @@ let channel = pusher.subscribe('chat-channel')
 let vi = new Vue({
     el: '#app',
     data: {
-        url: 'http://localhost/pusher-chat/chat/',
+        url: 'http://localhost/pusher-php/chat/',
         chats: [],
         username: '',
         chatInput: '',
