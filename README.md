@@ -1,2 +1,1 @@
-# pusher-php
-Learn real-time chat from php
+# Simple app real time chat
